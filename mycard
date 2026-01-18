@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的名片</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* 背景顏色，可自行更改 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* 讓圖片有一點陰影，看起來更專業 */
+            border-radius: 10px; /* 稍微圓角 */
+        }
+    </style>
+</head>
+<body>
+
+    <img src="card.png" alt="我的名片">
+
+</body>
+</html>
