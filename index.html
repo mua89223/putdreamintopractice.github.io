@@ -5,26 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的名片</title>
     <style>
+        /* 基礎樣式：確保背景鋪滿 */
         body {
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* 背景顏色，可自行更改 */
+            background-color: #f0f2f5;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            justify-content: center; /* 水平居中 */
+            align-items: center;     /* 垂直居中 */
+            min-height: 100vh;       /* 至少佔滿螢幕高度 */
+            font-family: -apple-system, sans-serif;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* 讓圖片有一點陰影，看起來更專業 */
-            border-radius: 10px; /* 稍微圓角 */
+
+        /* 響應式容器 */
+        .card-container {
+            width: 90%;             /* 手機上佔寬度 90% */
+            max-width: 450px;       /* 電腦上最大不超過 450px */
+            background: white;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* 響應式圖片設定 */
+        .card-container img {
+            width: 100%;            /* 自動撐滿容器寬度 */
+            height: auto;           /* 保持比例縮放 */
+            display: block;
+            border-radius: 12px;
+        }
+
+        /* 滑鼠懸停效果 (電腦版) */
+        .card-container:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 針對超小螢幕的微調 */
+        @media (max-width: 320px) {
+            .card-container {
+                width: 95%;
+                padding: 5px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <img src="mycard.png" alt="我的名片">
+    <div class="card-container">
+        <img src="mycard.png" alt="電子名片">
+    </div>
 
 </body>
 </html>
